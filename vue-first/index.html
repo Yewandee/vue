@@ -1,0 +1,48 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html> -->
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+
+<div id="app">
+  <h1 style="color: red">{{this.message}}</h1>
+
+  <button @click="count++">{{this.count }}</button>
+</div>
+
+<script type="module">
+  console.log('Vue', Vue)
+  export default {
+    data() {
+      return {
+        message: "Hello Yewande",
+        count: 0
+      }
+    },
+    methods: {
+      incrementCount(){
+        this.count++
+      }
+    },
+    computed: {},
+    watch: {},
+    mounted () {
+      console.log('mounted')
+    }
+
+
+  };
+</script>
+
+
